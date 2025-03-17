@@ -1,0 +1,428 @@
+html,
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+
+.hero {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/Assets/background.png);
+    background-position: center;
+    background-size: cover;
+}
+
+/* -----------------------------------------------------------------------Navbar----------------------------------------------------------------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 4.5vh;
+    align-items: center;
+    margin-left: 7vw;
+    margin-right: 7.5vw;
+}
+
+.navbar img {
+    height: 50px;
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar .signUp {
+    width: 110px; /* width pani fixed units ma nai haita boru screen size change huda media queries ma sano paredimla haita */
+    height: 6vh;
+    font-size: 20px; /* logo pani fixed nai ta cha so haita fixed font size */
+
+    background-color: transparent;
+    border-radius: 40px;
+    color: white;
+    border: 2px solid white;
+
+    /* padding: 2vh 0.5vw; */
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    opacity: 0.8;
+}
+
+.navbar .signUp:hover{
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* -----------------------------------------------------------------------Sidebar----------------------------------------------------------------------------------- */
+
+.sidebar {
+    height: 100vh;
+    width: 4vw;
+    background-color: rgba(9, 24, 59, 0.2);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.sidebar img {
+    color: white;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.sidebar .menuBtn img {
+    color: white;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.sidebar .menuBtn img:hover {
+    height:27px;
+    width:27px;
+    opacity: 1;
+}
+
+.menuBtn {
+    position: absolute;
+    top: 5%;
+    left: 30%;
+}
+
+.social {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+}
+
+.social img {
+    margin-top: 15px;
+}
+
+/* adding hover effects to social icons img */
+.social img:nth-child(1) {
+    opacity:0.7;
+}
+.social img:nth-child(1):hover {
+    opacity:1;
+    transform: scale(1.2);
+}
+
+.social img:nth-child(2) {
+    opacity:0.7;
+}
+.social img:nth-child(2):hover {
+    opacity:1;
+    transform: scale(1.2);
+}
+
+.social img:nth-child(3) {
+    opacity:0.7;
+}
+.social img:nth-child(3):hover {
+    opacity:1;
+    transform: scale(1.2);
+}
+
+/* applying css to other nav opt img */
+.otherNavOpt {
+    position: absolute;
+    bottom: 30px;
+    left: 30%;
+}
+
+.otherNavOpt img {
+    margin-top: 15px;
+}
+
+/* Applying hover effects */
+.otherNavOpt img:nth-child(1){
+    opacity:0.7;
+}
+.otherNavOpt img:nth-child(1):hover{
+    opacity:1;
+    transform: scale(1.2);
+}
+
+.otherNavOpt img:nth-child(2){
+    opacity:0.7;
+}
+.otherNavOpt img:nth-child(2):hover{
+    opacity:1;
+    transform: scale(1.2);
+}
+
+/* -----------------------------------------------------------------Main Content----------------------------------------------------------------------------------- */
+
+
+.mainContent .btnTour {
+    width: 145px;
+    height: 45px;
+    font-size: 20px;
+    background-color: transparent;
+    border-radius: 40px;
+    color: white;
+    border: 2px solid white;
+    padding: 0px 15px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 70px;
+}
+
+.mainContent {
+    position: absolute;
+    top: 25%;
+    left: 8%;
+}
+
+.mainContent h1, h2, .btnTour {
+    color: white;
+}
+
+.mainContent h2 {
+    font-weight: 100;
+    /* font-size: 1.5vmax; */
+    font-size: 31px;
+    
+}
+
+.mainContent h1 {
+   /*  font-size: 5vmax; */
+    font-size: 80px;
+    margin-top: 10px;
+   
+}
+
+.btnTour{
+    opacity:0.9;
+}
+.btnTour:hover{
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* -----------------------------------------------------------------Bubbles----------------------------------------------------------------------------------- */
+
+.bubbles img {
+    height: 40px;
+    width: 40px;
+    animation-name: bubblesAnimate;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.bubbles {
+    width: 100%;
+    position: absolute;
+    bottom: -40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12vw;
+}
+
+@keyframes bubblesAnimate {
+    0% {
+        transform: translateY(0vh);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-80vh);
+    }
+}
+
+.bubbles img:nth-child(1) {
+    animation-delay: 2s;
+}
+
+.bubbles img:nth-child(2) {
+    animation-delay: 3s;
+    height: 29px;
+    width: 29px;
+}
+
+.bubbles img:nth-child(3) {
+    animation-delay: 4.75s;
+    height: 31px;
+    width: 31px;
+}
+
+.bubbles img:nth-child(4) {
+    animation-delay: 3.5s;
+    height: 28px;
+    width: 28px;
+}
+
+.bubbles img:nth-child(5) {
+    animation-delay: 2.5s;
+}
+
+.bubbles img:nth-child(6) {
+    animation-delay: 4.5s;
+    height: 35px;
+    width: 35px;
+}
+
+.bubbles img:nth-child(7) {
+    animation-delay: 2.75s;
+    height: 30px;
+    width: 30px;
+}
+
+/* -----------------------------------------------------------------Media queries responsiveness------------------------------------------------------------------ */
+
+
+@media (max-width: 576px) {
+    
+    .hero {
+            background-image: url(Assets/mobileBackground.png);
+        }
+
+    .bubbles {
+        transform: translateY(100px);
+    }
+
+    .sidebar {
+        height: 50px;
+        width: 100vw;
+        position: absolute;
+        top: auto;
+        bottom: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+    }
+
+    .menuBtn {
+        position: unset;
+        line-height: 50px;
+        margin-left: 20px;
+    }
+    
+    .social {
+            position: unset;
+            line-height: 50px;
+        }
+    
+    .social img {
+            padding-left: 5px;
+        }
+    
+    .otherNavOpt {
+        position: unset;
+        line-height: 50px;
+        margin-right: 20px;
+    }
+
+    .otherNavOpt img {
+        padding-left: 5px;
+    }
+
+    .mainContent {
+        position: absolute;
+        top: 30% !important;
+        left: 8% !important;
+    } 
+    
+    .mainContent h2 {
+        font-weight: 100 !important;
+        /* font-size: 2.5vmax; */
+        font-size: 2rem !important;
+        
+    }
+    
+    .mainContent h1 {
+        /* font-size: 6.5vmax; */
+        font-size: 2.5rem !important;
+        margin-top: 10px !important;
+       
+    }
+
+    .navbar .signUp {
+        width: 12vmax; /* width pani fixed units ma nai haita boru screen size change huda media queries ma sano paredimla haita */
+        height: 5vh;
+        font-size: 1rem; /* logo pani fixed nai ta cha so haita fixed font size */
+    
+        background-color: transparent;
+        border-radius: 40px;
+        color: white;
+        border: 2px solid white;
+    
+        /* padding: 2vh 0.5vw; */
+        cursor: pointer;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        margin-bottom: 0px !important;
+
+    }
+
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+@media (max-width: 768px) {
+
+    .mainContent {
+        position: absolute;
+        top: 35%;
+        left: 8%;
+    }
+    
+    .mainContent h1, h2, .btnTour {
+        color: white;
+    }
+    
+    .mainContent h2 {
+        font-weight: 100;
+        /* font-size: 2.5vmax; */
+        font-size: 25px;
+        
+    }
+    
+    .mainContent h1 {
+        /* font-size: 6.5vmax; */
+        font-size: 60px;
+        margin-top: 10px;
+       
+    } 
+}
+
+/* ---------------------------------------------------------Adding some more effects----------------------------------- */
+
