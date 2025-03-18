@@ -307,7 +307,7 @@ body {
 @media (max-width: 576px) {
     
     .hero {
-            background-image: url(Assets/mobileBackground.png);
+            background-image: url(../Assets/mobileBackground.png);
         }
 
     .bubbles {
